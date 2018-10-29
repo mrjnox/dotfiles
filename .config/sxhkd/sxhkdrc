@@ -18,6 +18,10 @@ super + q
 super + Return
 	urxvt
 
+# desk fan controls
+super + {minus,equal}
+	wemo-toggle {wemo-fan,wemo-pi}
+
 # program launcher
 super + space
 	dmenu_recent -i
@@ -25,8 +29,11 @@ super + space
 	#dmenu_run
 
 # make sxhkd reload its configuration files:
-super + Escape
+super + shift + Escape
 	pkill -USR1 -x sxhkd
+
+super + Escape
+	i3lock -c 222222 -u no -e -f
 
 super + g
 	surf google.com
@@ -61,7 +68,8 @@ super + m
 
 # if the current node is automatic, send it to the last manual, otherwise pull the last leaf
 super + y
-	bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
+	mpv-yt
+	#bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
 
 # swap the current node and the biggest node
 super + b

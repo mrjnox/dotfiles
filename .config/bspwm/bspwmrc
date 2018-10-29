@@ -4,8 +4,9 @@ highlight=e95e8e
 
 sxhkd &
 conky &
+dunst &
 
-play-with-mpv &
+#play-with-mpv &
 bspc config honor_size_hints true
 
 bspc monitor -d I II III IV V VI VII VIII IX X
