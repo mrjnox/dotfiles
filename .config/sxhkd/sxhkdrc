@@ -19,8 +19,12 @@ super + Return
 	urxvt
 
 # desk fan controls
-super + {minus,equal}
+super + {minus,underscore}
 	wemo-toggle {wemo-fan,wemo-pi}
+
+# room light controls
+super + {equal,backslash,grave}
+	hue 13 {off,low,high}
 
 # program launcher
 super + space
@@ -33,7 +37,15 @@ super + shift + Escape
 	pkill -USR1 -x sxhkd
 
 super + Escape
-	i3lock -c 222222 -u no -e -f
+	i3lock -c 050505 -u no -e -f
+XF86ScreenSaver
+	i3lock -c 050505 -e -f
+XF86WebCam
+	mpv /dev/video0
+XF86Launch1
+	bspc rule -a URxvt:nmtui state=floating rectangle=400x600+483+50 && urxvt -name nmtui -e nmtui-connect
+super + XF86Launch1
+	notify-send `xprop`
 
 super + g
 	surf google.com
@@ -140,6 +152,9 @@ super + ctrl + space
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+super + shift + p
+	superp
 
 #
 # move/resize
