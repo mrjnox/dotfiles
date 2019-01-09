@@ -1,0 +1,227 @@
+#
+# wm independent hotkeys
+#
+
+# <                                      ` lastw
+# z qute      a             q screensh   1 desktop
+# x telegram  s             w            2 desktop
+# c spotify   d             e            3 desktop
+# v           f             r            4 desktop
+# b           g             t            5 desktop
+#                                                 
+# n           h left        y mpv-yt     5 desktop
+# m mono      j down        u            7 desktop
+# ,           k up          i            8 desktop
+# .           l right       o            9 desktop
+# /           ;             p            0  
+#             '             [            - wemo
+#             \             ]            =      
+#	                            
+#ESC lock,reload
+#SPACE alunc,presel
+#ENTER terminal
+#TAB lastd
+
+# screenshots
+super + shift + q
+	maim -s | xclip -selection clipboard -t image/png
+super + q
+	maim | xclip -selection clipboard -t image/png
+# screencasts
+super + control + q
+	screencast
+
+#super + q
+#	maim -i `xdotool getactivewindow` | xclip -selection clipboard -t image/png
+#super + q
+#	scrot -e 'mv $f ~/tmp/scrot/'
+#super + shift + q
+#	import ~/tmp/scrot/`date +%Y-%m-%d-%H%M%S`.png
+
+# terminal emulator
+super + Return
+	urxvt
+
+# set inner gaps
+super + ctrl + {1-9}
+	bspc config window_gap {5,10,15,25,40,50,60,75,90}
+
+# set outer gaps
+super + ctrl + shift + {1-9}
+	outer {0,10,20,40,70,110,160,220,290}
+
+# desk fan controls
+super + {minus,underscore}
+	wemo-toggle {wemo-fan,wemo-pi}
+
+# room light controls
+super + {equal,backslash}
+	hue 13 {off,low}
+
+# program launcher
+super + space
+	dmenu_recent -i
+	#rofi -show run -modi run -location 1 -width 100 -lines 2 -line-margin 0 -line-padding 1 -separator-style none -font "mono 10" -columns 9 -bw 0 -disable-history -hide-scrollbar -color-window "#222222, #222222, #b1b4b3" -color-normal "#222222, #b1b4b3, #222222, #005577, #b1b4b3" -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3" -kb-row-select "Tab" -kb-row-tab ""
+	#dmenu_run
+
+# make sxhkd reload its configuration files:
+super + shift + Escape
+	pkill -USR1 -x sxhkd
+super + Escape
+	i3lock -fe -c 1abb9b
+super + Print
+	nmtui-popup
+XF86Display
+	monitors.sh 0
+super + XF86Display
+	monitors.sh 1
+Print
+	bspc desktop -f last
+super + BackSpace
+	dmenuhandler
+super + f
+	bspc node -g sticky
+
+# super + g
+# 	surf google.com
+super + x
+	telegram-desktop
+super + z
+	qutebrowser
+super + c
+	spotify
+
+#volume controls
+XF86Audio{Raise,Lower}Volume
+	volumechange {10,-10}
+	#pactl set-sink-mute 0 false ; pactl set-sink-volume 0 {+10%,-10%} 
+
+XF86AudioMute
+	volumechange mute
+	#pactl set-sink-mute 0 toggle
+#
+# bspwm hotkeys
+#
+
+# quit bspwm normally
+super + alt + Escape
+	bspc quit
+
+# close and kill
+super + shift + w
+	bspc node -k
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# if the current node is automatic, send it to the last manual, otherwise pull the last leaf
+super + y
+	mpv-yt
+	#bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
+
+#super + shift + g
+#	git-xclip-clone
+
+# swap the current node and the biggest node
+super + b
+	bspc node -s biggest
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,s}
+	bspc node -t {tiled,pseudo_tiled,floating}
+
+# set the node flags
+super + ctrl + {x,y,z}
+	bspc node -g {locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# rotate or something
+super + shift + ctrl {h,j,k,l}
+	bspc window -R {west,south,north,east}
+super + shift + r
+	bspc node -R 90
+
+# focus the node for the given path jump
+#super + {p,b,comma,period}
+#	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous node
+super + {_,shift + }c
+	bspc node -f {next,prev}
+
+# focus the next/previous desktop
+super + bracket{left,right}
+	bspc desktop -f {prev,next}
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+super + shift + space
+	superp
+
+super + shift + p
+	superp
+super + p
+	dmenu-lpass
+#super + p + {_, shift, ctrl, ctrl + shift} + {_, alt}
+#	{paste_pass, paste_user, paste_user_pass, paste_user_then_pass} {'', 'dontguess'}
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
