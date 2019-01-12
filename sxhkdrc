@@ -1,7 +1,3 @@
-#
-# wm independent hotkeys
-#
-
 # <                                      ` lastw
 # z qute      a             q screensh   1 desktop
 # x telegram  s             w            2 desktop
@@ -22,6 +18,8 @@
 #ENTER terminal
 #TAB lastd
 
+### app
+
 super + Return
 	urxvt
 super + x
@@ -31,10 +29,15 @@ super + z
 super + c
 	spotify
 
-super + shift + q
-	maim -s | xclip -selection clipboard -t image/png
+### script
+
+super + space
+	dmenu_recent -i
+
 super + q
 	maim | xclip -selection clipboard -t image/png
+super + shift + q
+	maim -s | xclip -selection clipboard -t image/png
 super + control + q
 	screencast
 
@@ -45,20 +48,19 @@ super + p
 super + y
 	mpv-yt
 
+super + BackSpace
+	dmenuhandler
+super + shift + space
+	superp
 
 super + {minus,underscore}
 	wemo-toggle {wemo-fan,wemo-pi}
 super + {equal,backslash}
 	hue 13 {off,low}
 
-super + space
-	dmenu_recent -i
-	#rofi -show run -modi run -location 1 -width 100 -lines 2 -line-margin 0 -line-padding 1 -separator-style none -font "mono 10" -columns 9 -bw 0 -disable-history -hide-scrollbar -color-window "#222222, #222222, #b1b4b3" -color-normal "#222222, #b1b4b3, #222222, #005577, #b1b4b3" -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3" -kb-row-select "Tab" -kb-row-tab ""
-	#dmenu_run
 
-# reload sxhkd configuration file:
-super + shift + Escape
-	pkill -USR1 -x sxhkd
+### env
+
 XF86AudioMute
 	volumechange mute
 XF86Audio{Raise,Lower}Volume
@@ -68,38 +70,30 @@ super + Escape
 	i3lock -fe -c 1abb9b
 super + Print
 	nmtui-popup
+
 XF86Display
 	monitors.sh 0
 super + XF86Display
 	monitors.sh 1
-super + BackSpace
-	dmenuhandler
-super + shift + space
-	superp
-
-super + f
-	bspc node -g sticky
-# inner gaps
-super + ctrl + {1-9}
-	bspc config window_gap {5,10,15,25,40,50,60,75,90}
-# outer gaps
-super + ctrl + shift + {1-9}
-	outer {0,10,20,40,70,110,160,220,290}
 
 
-# close and kill
-super + shift + w
-	bspc node -k
-
-# alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
+### bspwm
 
 # focus/shift
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+super + f
+	bspc node -g sticky
+
+# close and kill
+super + shift + w
+	bspc node -k
+
+# monocle
+super + m
+	bspc desktop -l next
 
 # window state
 super + {t,shift + t,s}
@@ -113,6 +107,12 @@ super + bracket{left,right}
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
+# inner gaps
+super + ctrl + {1-9}
+	bspc config window_gap {5,10,15,25,40,50,60,75,90}
+# outer gaps
+super + ctrl + shift + {1-9}
+	outer {0,10,20,40,70,110,160,220,290}
 
 # presel
 super + ctrl + {h,j,k,l}
@@ -129,6 +129,11 @@ super + alt + shift + {h,j,k,l}
 # move floating
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# reload sxhkd config
+super + shift + Escape
+	pkill -USR1 -x sxhkd
+
 
 # quit bspwm normally
 super + alt + Escape
