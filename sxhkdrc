@@ -67,7 +67,7 @@ XF86Audio{Raise,Lower}Volume
 	volumechange {10,-10}
 
 super + Escape
-	i3lock -fe -c 1abb9b
+	i3lock -fe -c ffffff
 super + Print
 	nmtui-popup
 
