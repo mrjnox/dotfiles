@@ -65,6 +65,8 @@ XF86AudioMute
 	volumechange mute
 XF86Audio{Raise,Lower}Volume
 	volumechange {10,-10}
+super + XF86AudioMute
+	pavucontrol-popup
 
 super + Escape
 	i3lock -fe -c ffffff
