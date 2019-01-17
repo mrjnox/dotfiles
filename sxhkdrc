@@ -61,10 +61,13 @@ super + {equal,backslash}
 
 ### env
 
-XF86AudioMute
-	volumechange mute
 XF86Audio{Raise,Lower}Volume
 	volumechange {10,-10}
+XF86AudioMute
+	volumechange mute
+# USB-c earbud "pause button"
+XF86AudioPlay
+	volumechange mute
 super + XF86AudioMute
 	pavucontrol-popup
 
