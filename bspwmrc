@@ -3,7 +3,7 @@ highlight=1abb9b
 
 sxhkd &
 #hsetroot -solid '#222222'
-feh --bg-scale usr/img/john-towner-154060-unsplash.jpg 
+feh --bg-scale usr/img/mountain.png
 conky &
 dunst &
 compton &
