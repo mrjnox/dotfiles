@@ -69,9 +69,8 @@ XF86Audio{Raise,Lower}Volume
 	volumechange {10,-10}
 XF86AudioMute
 	volumechange mute
-# USB-c earbud "pause button"
-XF86AudioPlay
-	volumechange mute
+XF86AudioPlay # USB-c earbud button
+	playerctl play-pause
 super + XF86AudioMute
 	pavucontrol-popup
 
