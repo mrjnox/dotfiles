@@ -74,6 +74,11 @@ XF86AudioPlay # USB-c earbud button
 super + XF86AudioMute
 	pavucontrol-popup
 
+XF86MonBrightnessUp
+        xbacklight + 10
+XF86MonBrightnesDown
+        xbacklight - 10
+
 super + Escape
 	i3lock -fe -c ffffff
 super + Print
