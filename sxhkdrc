@@ -79,7 +79,7 @@ XF86MonBrightnesDown
         xbacklight - 10
 
 super + Escape
-	i3lock -fe -c ffffff
+	i3lock -fe -c 808080
 super + Print
 	nmtui-popup
 
