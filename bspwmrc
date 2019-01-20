@@ -3,7 +3,7 @@ highlight=1abb9b
 
 sxhkd &
 #hsetroot -solid '#222222'
-feh --bg-scale usr/img/mountain.png
+feh --bg-scale usr/img/charles.png
 conky &
 dunst &
 compton &
