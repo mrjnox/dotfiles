@@ -64,7 +64,7 @@ super + {equal,backslash}
 ### env
 
 XF86Audio{Raise,Lower}Volume
-	volumechange {10,-10}
+	volumechange {5,-5}
 XF86AudioMute
 	volumechange mute
 XF86AudioPlay
