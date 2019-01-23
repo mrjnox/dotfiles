@@ -35,4 +35,4 @@ c.url.default_page = 'about:blank'
 c.url.start_pages = 'about:blank'
 
 # no more Gmail "mailto" handler popups
-c.content.register_protocol_handler = 'true'
+c.content.register_protocol_handler = True
