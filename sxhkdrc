@@ -1,7 +1,7 @@
 # <                                      ` lastw
 # z qute      a             q screensh   1 desktop
-# x telegram  s             w            2 desktop
-# c spotify   d             e            3 desktop
+# x           s             w            2 desktop
+# c           d             e            3 desktop
 # v           f             r            4 desktop
 # b           g             t            5 desktop
 #                                                 
@@ -22,12 +22,8 @@
 
 super + Return
 	urxvt
-super + x
-	telegram-desktop
 super + z
 	qutebrowser
-super + c
-	spotify
 
 ### script
 
@@ -109,10 +105,6 @@ super + shift + w
 # monocle
 super + m
 	bspc desktop -l next
-
-# window state
-super + {t,shift + t,s}
-	bspc node -t {tiled,pseudo_tiled,floating}
 
 # focus the next/previous desktop
 super + bracket{left,right}
