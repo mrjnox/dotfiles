@@ -33,3 +33,6 @@ c.url.default_page = 'about:blank'
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
 c.url.start_pages = 'about:blank'
+
+# no more Gmail "mailto" handler popups
+content.register_protocol_handler = 'true'
