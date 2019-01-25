@@ -1,5 +1,6 @@
 #! /bin/sh
 highlight=1abb9b
+export LPASS_AGENT_TIMEOUT=0
 
 sxhkd &
 #hsetroot -solid '#222222'
