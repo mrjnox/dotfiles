@@ -30,6 +30,9 @@ super + z
 super + space
 	dmenu_recent -i
 
+super + alt + space
+	rofi -show ssh
+
 super + q
 	maim | xclip -selection clipboard -t image/png
 super + shift + q
