@@ -1,6 +1,7 @@
 #! /bin/sh
 highlight=1abb9b
 export LPASS_AGENT_TIMEOUT=0
+export GTK_THEME=Arc-Dark
 
 sxhkd &
 #hsetroot -solid '#222222'
