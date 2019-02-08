@@ -85,7 +85,7 @@ super + Escape
 super + Print
 	nmtui-popup
 super + control + Print
-	nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2
+	nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2 || notify-send 'WWAN not available'
 
 XF86Display
 	monitors.sh 0
