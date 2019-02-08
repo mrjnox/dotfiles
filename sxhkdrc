@@ -84,6 +84,8 @@ super + Escape
 	i3lock -fe -c 808080
 super + Print
 	nmtui-popup
+super + shift + Print
+	nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2
 
 XF86Display
 	monitors.sh 0
