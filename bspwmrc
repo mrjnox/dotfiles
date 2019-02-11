@@ -5,7 +5,7 @@ export GTK_THEME=Arc-Dark
 
 sxhkd &
 #hsetroot -solid '#222222'
-feh --bg-scale usr/img/charles.png
+feh --bg-scale usr/img/charles-crop.png
 conky &
 dunst &
 compton &
