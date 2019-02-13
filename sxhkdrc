@@ -76,16 +76,16 @@ super + XF86AudioMute
 	pavucontrol-popup
 
 XF86MonBrightnessUp
-        xbacklight + 10
+        xbacklight -set 50
 XF86MonBrightnesDown
-        xbacklight - 10
+        xbacklight -set 20
 
 super + Escape
 	i3lock -fe -c 808080
 super + Print
 	nmtui-popup
 XF86Favorites
-	nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2 || notify-send 'WWAN not available'
+	nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2 || notify-send -t 500 'WWAN not available'
 
 XF86Display
 	monitors.sh 0
