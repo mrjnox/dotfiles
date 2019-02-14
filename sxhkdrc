@@ -85,7 +85,7 @@ super + Escape
 super + Print
 	nmtui-popup
 XF86Favorites
-	for i in {1..20} ; do echo "$i" | notify-send  ; nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2 && exit ; sleep 3 ; done
+	for i in {1..20} ; do nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2 && exit ; sleep 3 ; done
 
 XF86Display
 	monitors.sh 0
