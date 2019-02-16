@@ -10,6 +10,8 @@ conky &
 dunst &
 compton &
 unclutter --timeout 1 --ignore-scrolling --fork
+# disable trackpad
+xinput --disable 12
 
 bspc config honor_size_hints true
 
