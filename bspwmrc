@@ -19,7 +19,7 @@ bspc monitor eDP1 -d I II III IV V VI VII
 bspc monitor HDMI1 -d VIII IX X
 
 bspc config top_padding		20px
-bspc config border_width         5
+bspc config border_width         10
 bspc config window_gap          60
 
 bspc config focused_border_color  "#$highlight"
