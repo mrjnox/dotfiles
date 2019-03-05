@@ -13,7 +13,7 @@ EDITOR=vim
 function docx { unoconv --stdout "$1" | zathura - & }
 function ikvm { java -jar /opt/SMCIPMITool_2.21.0_build.181029_bundleJRE_Linux_x64/SMCIPMITool.jar "$1" ADMIN ADMIN ukvm ; }
 function ssh { /usr/local/bin/ssh-eval.sh "$*" ; }
-function find { /usr/bin/find $* 2> /dev/null ; }
+#function find { /usr/bin/find $* 2> /dev/null ; }
 export -f docx
 export -f ikvm
 
