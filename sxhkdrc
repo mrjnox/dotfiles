@@ -75,10 +75,8 @@ XF86AudioNext
 super + XF86AudioMute
 	pavucontrol-popup
 
-XF86MonBrightnessUp
-        xbacklight -set 50
-XF86MonBrightnesDown
-        xbacklight -set 20
+#XF86MonBrightnessUp
+#XF86MonBrightnesDown
 
 super + Escape
 	i3lock -fe -c 808080
