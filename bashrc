@@ -10,6 +10,8 @@ HISTFILESIZE=99999999
 HISTTIMEFORMAT='%F %T '
 EDITOR=vim
 
+export HOSTFILE=$HOME/.config/hosts
+
 function docx { unoconv --stdout "$1" | zathura - & }
 function ikvm { java -jar /opt/SMCIPMITool_2.21.0_build.181029_bundleJRE_Linux_x64/SMCIPMITool.jar "$1" ADMIN ADMIN ukvm ; }
 function ssh { /usr/local/bin/ssh-eval.sh "$*" ; }
