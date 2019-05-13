@@ -24,3 +24,4 @@ alias ls='ls --color=auto'
 alias glances="/usr/bin/glances 2> /dev/null"
 alias ikvm="java -jar /opt/SMCIPMITool_2.21.0_build.181029_bundleJRE_Linux_x64/SMCIPMITool.jar $1 ADMIN ADMIN ukvm"
 alias cal="cal -y"
+alias wiki="w3m /usr/share/doc/arch-wiki/html/en/Main_page.html"

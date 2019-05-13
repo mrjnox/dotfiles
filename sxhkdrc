@@ -54,10 +54,10 @@ super + BackSpace
 super + shift + space
 	superp
 
-super + {minus,underscore}
-	wemo-toggle {wemo-fan,wemo-pi}
-super + {equal,backslash}
-	hue 13 {off,low}
+#super + {minus,underscore}
+#	wemo-toggle {wemo-fan,wemo-pi}
+#super + {equal,backslash}
+#	hue 13 {off,low}
 
 
 ### env
@@ -81,11 +81,15 @@ super + XF86AudioMute
 super + Escape
 	i3lock -fe -c 808080
 super + Print
+	networkmanager_dmenu
+super + shift + Print
 	nmtui-popup
+super + XF86Favorites
+	modemManager-popup.sh
 XF86Favorites
 	for i in {1..20} ; do nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2 && exit ; sleep 3 ; done
 XF86Tools
-	bspc config border_width 7 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth
+	outer 0 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth
 XF86Display
 	monitors.sh 0
 super + XF86Display
