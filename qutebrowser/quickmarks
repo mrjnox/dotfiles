@@ -19,8 +19,5 @@ d https://drive.google.com/drive/
 pass https://passwordsgenerator.net/
 op1 https://teenageengineering.com/guides/op-1
 vault http://archive.kernel.org/centos-vault/
-<<<<<<< HEAD
 b https://www.bandlab.com/library/projects/recent
-=======
 unifi https://unifi:8443/manage/site/default/dashboard
->>>>>>> f407aca4ac2c1200cb42ff0a71cec73b61e4d00b
