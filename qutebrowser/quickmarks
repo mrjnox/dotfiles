@@ -22,3 +22,4 @@ vault http://archive.kernel.org/centos-vault/
 b https://www.bandlab.com/library/projects/recent
 unifi https://unifi:8443/manage/site/default/dashboard
 teamviewer https://www.teamviewer.com/en/download/previous-versions/
+rsl http://localhost:8888/gui/
