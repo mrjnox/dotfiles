@@ -26,3 +26,5 @@ rsl http://localhost:8888/gui/
 suck https://suckless.org/
 harm http://harmful.cat-v.org/software/
 lima http://203.0.113.1/cgi-bin/luci
+ad https://mirrors.edge.kernel.org/archlinux/iso/
+mm https://mm.flavoursys.com/fsys-support/channels/town-square
