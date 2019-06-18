@@ -29,3 +29,4 @@ lima http://203.0.113.1/cgi-bin/luci
 ad https://mirrors.edge.kernel.org/archlinux/iso/
 mm https://mm.flavoursys.com/fsys-support/channels/town-square
 hold https://holdmail.usps.com/holdmail/
+captive http://gstatic.com/generate_204
