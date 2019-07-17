@@ -21,7 +21,7 @@
 ### app
 
 super + Return
-	st
+	urxvt
 super + z
 	qutebrowser
 
@@ -38,9 +38,10 @@ super + q
 super + shift + q
 	maim -s | xclip -selection clipboard -t image/png
 super + control + q
-	maim -d 3 | xclip -selection clipboard -t image/png && notify-send -u low 'Screenshot captured'
-super + control + shift + q
-	maim -s -d 3 | xclip -selection clipboard -t image/png && notify-send -u low 'Screenshot captured'
+        screencast
+#	maim -d 3 | xclip -selection clipboard -t image/png && notify-send -u low 'Screenshot captured'
+#super + control + shift + q
+#	maim -s -d 3 | xclip -selection clipboard -t image/png && notify-send -u low 'Screenshot captured'
 
 super + shift + p
 	superp
