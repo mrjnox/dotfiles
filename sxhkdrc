@@ -110,8 +110,8 @@ super + {s,t}
 	bspc node -t {floating,tiled}
 
 # close and kill
-super + shift + w
-	bspc node -k
+super + {_,shift + }w
+	bspc node -{c,k}
 
 # monocle
 super + m
