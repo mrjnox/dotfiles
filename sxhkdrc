@@ -46,7 +46,7 @@ super + control + q
 super + shift + p
 	superp
 super + p
-	dmenu-lpass
+	passmenu
 super + y
 	mpv-yt
 
