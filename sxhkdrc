@@ -43,12 +43,8 @@ super + control + q
 #super + control + shift + q
 #	maim -s -d 3 | xclip -selection clipboard -t image/png && notify-send -u low 'Screenshot captured'
 
-super + shift + p
-	superp
 super + p
 	passmenu
-super + y
-	mpv-yt
 
 super + BackSpace
 	dmenuhandler
