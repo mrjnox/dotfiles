@@ -43,12 +43,8 @@ super + control + q
 #super + control + shift + q
 #	maim -s -d 3 | xclip -selection clipboard -t image/png && notify-send -u low 'Screenshot captured'
 
-super + shift + p
-	superp
 super + p
-	dmenu-lpass
-super + y
-	mpv-yt
+	passmenu
 
 super + BackSpace
 	dmenuhandler
@@ -92,10 +88,7 @@ XF86Favorites
 XF86Tools
 	xbacklight -set 50 ; outer 0 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth
 XF86Display
-	monitors.sh 0
-super + XF86Display
-	monitors.sh 1
-
+	monitors.sh
 
 ### bspwm
 
