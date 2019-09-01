@@ -11,6 +11,7 @@ sxhkd &
 conky &
 dunst &
 compton &
+redshift -l 45:-93 &
 unclutter --timeout 1 --ignore-scrolling --fork
 # disable trackpad
 #xinput --disable 12
