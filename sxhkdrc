@@ -69,6 +69,8 @@ XF86AudioPrev
 	playerctl previous
 XF86AudioNext
 	playerctl next
+XF86AudioMicMute
+        ssh zr 'playerctl play-pause'
 super + XF86AudioMute
 	pavucontrol-popup
 
