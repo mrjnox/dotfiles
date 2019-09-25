@@ -21,7 +21,7 @@
 ### app
 
 super + Return
-	urxvt
+	st
 super + z
 	qutebrowser
 
