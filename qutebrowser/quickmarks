@@ -22,7 +22,7 @@ vault http://archive.kernel.org/centos-vault/
 b https://www.bandlab.com/library/projects/recent
 unifi https://unifi:8443/manage/site/default/dashboard
 teamviewer https://www.teamviewer.com/en/download/previous-versions/
-rsl http://localhost:8888/gui/
+st https://localhost:8384/#
 suck https://suckless.org/
 harm http://harmful.cat-v.org/software/
 lima http://203.0.113.1/cgi-bin/luci
