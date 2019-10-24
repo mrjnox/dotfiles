@@ -1,6 +1,5 @@
 #! /bin/sh
 highlight=1abb9b
-export LPASS_AGENT_TIMEOUT=0
 export GTK_THEME=Arc-Dark
 
 bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
