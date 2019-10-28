@@ -88,7 +88,7 @@ super + XF86Favorites
 XF86Favorites
 	for i in {1..20} ; do nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2 && exit ; sleep 3 ; done
 XF86Tools
-	xbacklight -set 50 ; outer 0 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth
+	xbacklight -set 50 ; outer 0 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth ; xset +dpms ; xset s noblank ; xset s off
 XF86Display
 	monitors.sh
 
