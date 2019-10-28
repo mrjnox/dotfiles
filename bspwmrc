@@ -18,6 +18,11 @@ unclutter --timeout 1 --ignore-scrolling --fork
 # disable trackpad
 #xinput --disable 12
 
+# make sure gnome-keyring unlocks on login
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+export $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
+dbus-update-activation-environment --systemd DISPLAY
+
 bspc config honor_size_hints true
 
 
