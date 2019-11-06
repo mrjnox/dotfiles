@@ -2,8 +2,6 @@
 
 super + Return
 	urxvt
-super + z
-	qutebrowser
 
 ### script
 
