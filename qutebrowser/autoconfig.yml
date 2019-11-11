@@ -58,8 +58,8 @@ settings:
     global:
       DEFAULT: https://duckduckgo.com/?q={}
       aw: https://wiki.archlinux.org/index.php?search={}
-      g: https://www.google.com/search?q={}
       sp: https://www.startpage.com/do/metasearch.pl?query={}
       y: https://www.youtube.com/results?search_query={}
+      g: https://www.google.com/search?q={}
   url.start_pages:
     global: about:blank
