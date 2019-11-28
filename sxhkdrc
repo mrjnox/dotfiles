@@ -4,10 +4,10 @@ super + Return
 	urxvt
 super + control + r
         rifle ~/tmp/$(ls -1t ~/tmp | head -1)
-super + control + p
-        mpv $(xclip -o -selection clipboard)
-super + shift + control + P
-        mpv $(xclip -o -selection primary)
+# super + control + p
+#         mpv $(xclip -o -selection clipboard)
+# super + shift + control + P
+#         mpv $(xclip -o -selection primary)
 
 ### script
 
@@ -31,7 +31,7 @@ super + p
 	passmenu
 super + shift + p
 	ls -1 ~/.password-store/**/*.gpg | rofi -dmenu -i -p file | sed -e 's/^\/home\/mrj\/.password-store\///g' -e 's/.gpg$//g' | xclip -r -selection primary
-super + shift + control + p
+super + control + shift + p
 	ls -1 ~/.password-store/**/*.gpg | rofi -dmenu -i -p file | xclip -r -selection primary
 
 super + BackSpace
