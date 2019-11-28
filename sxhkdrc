@@ -30,7 +30,7 @@ super + control + q
 super + p
 	passmenu
 super + shift + p
-	ls -1 ~/.password-store/**/*.gpg | rofi -dmenu -i -p file | sed -e 's/^\/home\/mrj\/.password-store\///g' -e 's/.gpg$//g' | xclip -r -selection primary
+	ls -1 ~/.password-store/**/*.gpg | rofi -dmenu -i -p user | sed -e 's/^\/home\/mrj\/.password-store\///g' -e 's/.gpg$//g' | xclip -r -selection primary
 super + control + shift + p
 	ls -1 ~/.password-store/**/*.gpg | rofi -dmenu -i -p file | xclip -r -selection primary
 
