@@ -30,7 +30,7 @@ super + control + q
 super + p
 	passmenu
 super + shift + p
-	ls -1 ~/.password-store/**/*.gpg | rofi -dmenu -i | xclip -r -selection primary
+	ls -1 ~/.password-store/**/*.gpg | rofi -dmenu -i -p file | xclip -r -selection primary
 
 super + BackSpace
 	dmenuhandler
