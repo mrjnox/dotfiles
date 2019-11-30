@@ -2,8 +2,6 @@
 
 super + Return
 	urxvt
-super + control + r
-        rifle ~/tmp/$(ls -1t ~/tmp | head -1)
 # super + control + p
 #         mpv $(xclip -o -selection clipboard)
 # super + shift + control + P
@@ -23,6 +21,10 @@ super + shift + q
 	maim -s | xclip -selection clipboard -t image/png
 super + control + q
         screencast
+super + shift + o
+        rifle ~/tmp/$(ls -1t ~/tmp | rofi -dmenu -i -p open)
+super + shift + control + o
+        rifle ~/tmp/$(ls -1t ~/tmp | head -1)
 #	maim -d 3 | xclip -selection clipboard -t image/png && notify-send -u low 'Screenshot captured'
 #super + control + shift + q
 #	maim -s -d 3 | xclip -selection clipboard -t image/png && notify-send -u low 'Screenshot captured'
