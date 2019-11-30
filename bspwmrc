@@ -1,16 +1,26 @@
 #! /bin/sh
-highlight=1abb9b
+case $HOSTNAME in
+  "si")
+    highlight=1abb9b
+    ;;
+  "pb")
+    highlight=e95e8e
+    ;;
+  "zr")
+    highlight=66e0ff
+    ;;
+esac
 export LPASS_AGENT_TIMEOUT=0
 export GTK_THEME=Arc-Dark
 export XDG_CONFIG_HOME=/home/mrj/.config/
 export RTV_EDITOR=vim
 
-#bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
-#xrandr --output HDMI1 --mode 1920x1080 --same-as eDP1 --scale-from 2560x1440
+bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
+xrandr --output HDMI1 --mode 1920x1080 --same-as eDP1 --scale-from 2560x1440
 
-bspc monitor eDP1 -d I II III IV V VI VII 
-bspc monitor HDMI1 -d VIII IX X
-xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1
+#bspc monitor eDP1 -d I II III IV V VI VII 
+#bspc monitor HDMI1 -d VIII IX X
+#xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1
 
 sxhkd &
 #hsetroot -solid '#222222'
