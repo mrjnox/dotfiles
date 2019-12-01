@@ -1,53 +1,37 @@
-### app
-
 super + Return
 	urxvt
-# super + control + p
-#         mpv $(xclip -o -selection clipboard)
-# super + shift + control + P
-#         mpv $(xclip -o -selection primary)
-
-### script
-
+super + p
+	passmenu
 super + space
 	dmenu_recent -i
-
 super + alt + space
 	rofi -show ssh
+super + control + q
+        screencast
+super + shift + space
+	superp
+super + Print
+	networkmanager_dmenu
+XF86Display
+	monitors.sh
 
 super + q
 	maim | xclip -selection clipboard -t image/png
 super + shift + q
 	maim -s | xclip -selection clipboard -t image/png
-super + control + q
-        screencast
-super + shift + o
+super + o
         rifle ~/tmp/$(ls -1t ~/tmp | rofi -dmenu -i -p open)
-super + shift + control + o
+super + shift + o
         rifle ~/tmp/$(ls -1t ~/tmp | head -1)
-#	maim -d 3 | xclip -selection clipboard -t image/png && notify-send -u low 'Screenshot captured'
-#super + control + shift + q
-#	maim -s -d 3 | xclip -selection clipboard -t image/png && notify-send -u low 'Screenshot captured'
-
-super + p
-	passmenu
 super + shift + p
-	ls -1 ~/.password-store/**/*.gpg | sed -e 's/^\/home\/mrj\/.password-store\///g' -e 's/.gpg$//g' | rofi -dmenu -i -p user | xclip -r -selection primary
+	ls -1 ~/.password-store/**/*.gpg | sed -e 's/^\/home\/mrj\/.password-store\///g' -e 's/.gpg$//g' | rofi -dmenu -i -p account | xclip -r -selection primary
 super + control + shift + p
 	ls -1 ~/.password-store/**/*.gpg | rofi -dmenu -i -p file | xclip -r -selection primary
 
-#super + BackSpace
-#	dmenuhandler
-super + shift + space
-	superp
-
-#super + {minus,underscore}
-#	wemo-toggle {wemo-fan,wemo-pi}
-#super + {equal,backslash}
-#	hue 13 {off,low}
-
-
-### env
+XF86Favorites
+	for i in {1..20} ; do nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2 && exit ; sleep 3 ; done
+XF86Tools
+	xbacklight -set 50 ; outer 0 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth ; xset +dpms ; xset s noblank ; xset s off
 
 XF86Audio{Raise,Lower}Volume
 	volumechange {5,-5}
@@ -63,24 +47,8 @@ XF86AudioMicMute
         ssh zr 'playerctl play-pause'
 super + XF86AudioMute
 	pavucontrol-popup
-
-#XF86MonBrightnessUp
-#XF86MonBrightnesDown
-
 super + Escape
 	i3lock -fe -c 808080
-super + Print
-	networkmanager_dmenu
-super + shift + Print
-	nmtui-popup
-super + XF86Favorites
-	modemManager-popup.sh
-XF86Favorites
-	for i in {1..20} ; do nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2 && exit ; sleep 3 ; done
-XF86Tools
-	xbacklight -set 50 ; outer 0 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth ; xset +dpms ; xset s noblank ; xset s off
-XF86Display
-	monitors.sh
 
 ### bspwm
 
@@ -140,7 +108,6 @@ super + shift + {Left,Down,Up,Right}
 # reload sxhkd config
 super + shift + Escape
 	pkill -USR1 -x sxhkd
-
 
 # quit bspwm normally
 super + alt + Escape
