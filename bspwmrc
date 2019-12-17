@@ -19,6 +19,7 @@ case $HOSTNAME in
   "pb")
     highlight=e95e8e
     conky &
+    redshift -l 45:-93 &
 
     bspc monitor -d I II III IV V VI VII VIII IX X
     bspc config top_padding 1px
@@ -30,6 +31,7 @@ case $HOSTNAME in
     highlight=66e0ff
     sleep 5; conky -a top_right -x -2530 -y 10 -d &
     pactl set-sink-volume 0 100%
+    redshift -l 45:-93 &
 
     xrandr --output DP-2 --right-of DP-1
     bspc monitor -d I II III IV V
@@ -54,14 +56,13 @@ dbus-update-activation-environment --systemd DISPLAY
 compton &
 dunst &
 sxhkd &
-redshift -l 45:-93 &
 unclutter --timeout 1 --ignore-scrolling --fork
 xrdb -merge .Xresources 2> /dev/null &
 
 bspc rule -a discord follow=no
 bspc rule -a mplayer state=floating
 bspc rule -a mpv state=floating
-bspcrrule -a teamViewer state=floating
+bspc rule -a teamViewer state=floating
 bspc rule -a surf state=tiled manage=on
 bspc rule -a zathura state=tiled manage=on
 bspc rule -a zoom state=floating desktop='^7' follow=no
