@@ -9,6 +9,8 @@ super + alt + space
 super + control + q
         screencast
 super + shift + space
+	rofi -show window
+super + shift + control + space
 	superp
 super + Print
 	networkmanager_dmenu
@@ -104,6 +106,7 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 super + shift + {Left,Down,Up,Right}
 	bspc node -v {-80 0,0 80,0 -80,80 0}
+
 
 # reload sxhkd config
 super + shift + Escape
