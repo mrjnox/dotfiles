@@ -109,7 +109,6 @@ super + {Left,Down,Up,Right}
 super + shift + {Left,Down,Up,Right}
 	bspc node -v {-80 0,0 80,0 -80,80 0}
 
-
 # reload sxhkd config
 super + shift + Escape
 	pkill -USR1 -x sxhkd
