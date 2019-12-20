@@ -47,8 +47,6 @@ XF86AudioNext
 	playerctl next
 XF86AudioMicMute
         ssh zr 'playerctl play-pause'
-super + XF86AudioMute
-	pavucontrol-popup
 super + Escape
 	i3lock -fe -c 808080
 
