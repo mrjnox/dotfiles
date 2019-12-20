@@ -21,8 +21,10 @@ XF86Display
 
 super + q
 	maim | xclip -selection clipboard -t image/png
+	#maim --format png | xclip -selection clipboard -t image/png
 super + shift + q
 	maim -s | xclip -selection clipboard -t image/png
+	#maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png
 super + o
         rifle ~/tmp/$(ls -1t ~/tmp | rofi -dmenu -i -p open)
 super + shift + o
