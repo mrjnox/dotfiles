@@ -6,7 +6,7 @@ super + space
 	dmenu_recent -i
 super + alt + space
 	rofi -show ssh
-super + control + q
+super + ctrl + q
         screencast
 super + shift + space
 	rofi -show window
