@@ -79,6 +79,8 @@ super + bracket{left,right}
 # focus the last node/desktop
 Print  
         bspc desktop -f last
+Alt_R
+        bspc desktop -f last
 
 # inner gaps
 super + ctrl + {1-9}
