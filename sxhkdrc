@@ -1,3 +1,5 @@
+super + shift + m
+	man -k . | awk '{ print $1 " " $2 }' | dmenu -i -p man | awk '{ print $2 " " $1 }' | tr -d '()' | xargs man -t | ps2pdf - - | zathura -
 super + Return
 	urxvt
 super + p
@@ -30,8 +32,6 @@ super + shift + p
 super + control + shift + p
 	ls -1 ~/.password-store/**/*.gpg | rofi -dmenu -i -p file | xclip -r -selection primary
 
-XF86Favorites
-	nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2
 XF86Tools
 	xbacklight -set 50 ; outer 0 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth ; xset +dpms ; xset s noblank ; xset s off
 
