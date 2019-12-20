@@ -50,7 +50,7 @@ XF86AudioNext
 XF86AudioMicMute
         ssh zr 'playerctl play-pause'
 super + Escape
-	i3lock -fe -c 808080
+	i3lock -fe -c 222222
 
 ### bspwm
 
