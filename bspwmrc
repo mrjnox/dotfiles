@@ -64,7 +64,7 @@ xrdb -merge .Xresources 2> /dev/null &
 bspc rule -a discord follow=no
 bspc rule -a mplayer state=floating
 bspc rule -a mpv state=floating
-bspc rule -a teamViewer state=floating
+bspc rule -a TeamViewer state=floating
 bspc rule -a surf state=tiled manage=on
 bspc rule -a zathura state=tiled manage=on
 bspc rule -a zoom state=floating desktop='^7' follow=no
