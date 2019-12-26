@@ -1,0 +1,6 @@
+XF86Favorites
+	nmcli connection up fa2d9425-514c-4b2c-882e-02080f0476e2
+XF86Audio{Raise,Lower}Volume
+	volumechange {5,-5}
+XF86AudioMute
+	volumechange mute
