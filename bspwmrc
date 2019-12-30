@@ -12,6 +12,9 @@ case $HOSTNAME in
     #bspc monitor HDMI1 -d VIII IX X
     #xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1
 
+    #disable trackpad
+    xinput --disable 12
+
     bspc config top_padding 20px
     bspc config border_width 7
     bspc config window_gap 60
