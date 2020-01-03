@@ -49,4 +49,8 @@ teams https://teams.microsoft.com/
 riot https://riot.im/app/
 sp https://www.startpage.com/
 pkgs https://pkgs.org/
+<<<<<<< HEAD
 cf https://www.centos.org/forums/index.php
+=======
+distro https://distrowatch.com/dwres.php?resource=bittorrent
+>>>>>>> 5c1ac4a667fc2b619dc8daeea62e1dec9c316181
