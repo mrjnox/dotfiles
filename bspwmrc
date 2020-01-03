@@ -70,7 +70,6 @@ bspc rule -a mpv state=floating
 bspc rule -a TeamViewer state=floating
 bspc rule -a surf state=tiled manage=on
 bspc rule -a zathura state=tiled manage=on
-bspc rule -a zoom state=floating desktop='^7' follow=no
 
 bspc config honor_size_hints true
 bspc config focused_border_color  "#$highlight"
