@@ -27,6 +27,8 @@ super + o
         rifle ~/tmp/$(ls -1t ~/tmp | rofi -dmenu -i -p open)
 super + shift + o
         rifle ~/tmp/$(ls -1t ~/tmp | head -1)
+super + shift + c
+        notify-send "Clipboard:" "$(xclip -o -selection clipboard)" ; notify-send "Primary:" "$(xclip -o -selection primary)"
 
 super + p
 	passmenu
