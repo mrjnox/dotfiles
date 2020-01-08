@@ -1,5 +1,3 @@
-super + shift + m
-	man -k . | awk '{ print $1 " " $2 }' | dmenu -i -p man | awk '{ print $2 " " $1 }' | tr -d '()' | xargs man -t | ps2pdf - - | zathura -
 super + Return
 	urxvt
 super + p
