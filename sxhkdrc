@@ -1,7 +1,5 @@
 super + Return
 	urxvt
-super + p
-	passmenu
 super + space
 	dmenu_recent -i
 super + shift + m
@@ -29,6 +27,9 @@ super + o
         rifle ~/tmp/$(ls -1t ~/tmp | rofi -dmenu -i -p open)
 super + shift + o
         rifle ~/tmp/$(ls -1t ~/tmp | head -1)
+
+super + p
+	passmenu
 super + shift + p
 	ls -1 ~/.password-store/**/*.gpg | sed -e 's/^\/home\/mrj\/.password-store\///g' -e 's/.gpg$//g' | rofi -dmenu -i -p account | xclip -r -selection primary
 super + control + shift + p
