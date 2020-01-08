@@ -6,6 +6,8 @@ super + p
 	passmenu
 super + space
 	dmenu_recent -i
+super + shift + m
+	dmenumount
 super + alt + space
 	rofi -show ssh
 super + ctrl + q
