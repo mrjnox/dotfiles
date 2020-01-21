@@ -48,7 +48,7 @@ case $HOSTNAME in
     redshift -l 45:-93 &
 
     xrandr --output DP-2 --right-of DP-1
-    bspc monitor -d I II III IV V
+    bspc monitor DP-1 -d I II III IV V
     bspc monitor DP-2 -d VI VII VIII IX X
     bspc config top_padding 1px
     bspc config border_width 5
