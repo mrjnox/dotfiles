@@ -62,8 +62,8 @@ super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 super + ctrl + f
 	bspc node -g sticky
-super + {s,t}
-	bspc node -t {floating,tiled}
+super + {s, shift + s,t}
+	bspc node -t {floating,pseudo_tiled,tiled}
 
 # close and kill
 super + {_,shift + }w
