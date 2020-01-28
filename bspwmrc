@@ -24,7 +24,7 @@ case $HOSTNAME in
     xss-lock -- i3lock -fe -c 808080 &
     conky &
 
-    bspc -d I II III IV V VI VII VIII IX X
+    bspc monitor LVDS-1 -d I II III IV V VI VII VIII IX X
 
     bspc config top_padding 10px
     bspc config border_width 7
