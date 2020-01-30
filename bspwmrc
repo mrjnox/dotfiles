@@ -8,10 +8,6 @@ case $HOSTNAME in
     bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
     xrandr --output HDMI1 --mode 1920x1080 --same-as eDP1 --scale-from 2560x1440
 
-    #bspc monitor eDP1 -d I II III IV V VI VII 
-    #bspc monitor HDMI1 -d VIII IX X
-    #xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1
-
     #disable trackpad
     xinput --disable 12
 
