@@ -8,6 +8,8 @@ super + shift + control + m
 	dmenuumount
 super + shift + e
 	dmenuunicode
+super + shift + m
+	dmenuyoutube.sh
 super + alt + space
 	rofi -show ssh
 super + ctrl + q
