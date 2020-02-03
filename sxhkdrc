@@ -8,8 +8,8 @@ super + shift + control + m
 	dmenuumount
 super + shift + e
 	dmenuunicode
-super + shift + m
-	dmenuyoutube.sh
+super + shift + y
+	cd /a/sim/yt ; dmenfm
 super + alt + space
 	rofi -show ssh
 super + ctrl + q
