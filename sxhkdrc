@@ -6,6 +6,8 @@ super + shift + m
 	dmenumount
 super + shift + control + m
 	dmenuumount
+super + shift + e
+	dmenuunicode
 super + alt + space
 	rofi -show ssh
 super + ctrl + q
