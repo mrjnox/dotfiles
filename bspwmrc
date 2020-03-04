@@ -50,7 +50,6 @@ case $HOSTNAME in
     bspc config top_padding 1px
     bspc config border_width 5
     bspc config window_gap 40
-    bspc rule -a zoom state=floating desktop='^1' follow=no
   ;;
 esac
 
