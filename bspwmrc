@@ -40,7 +40,7 @@ case $HOSTNAME in
   ;;
   "zr")
     highlight=66e0ff
-    sleep 5; conky -a top_right -x -2530 -y 10 -d &
+    sleep 5; conky -a top_right -x -2530 -y 1 -d &
     pactl set-sink-volume 0 100%
     redshift -l 45:-93 &
 
