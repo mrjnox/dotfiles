@@ -11,7 +11,7 @@ super + shift + e
 super + shift + y
 	cd /a/sim/yt ; dmenfm
 super + shift + control + y
-	user=$(cat /a/sim/yt/twitch | rofi -dmenu) ; mpv http://twitch.tv/$user || notify-send 'mpv' 'Cannot open Twitch stream'
+	user=$(cat /a/sim/yt/twitch | rofi -dmenu -i) ; mpv http://twitch.tv/$user || notify-send 'mpv' 'Cannot open Twitch stream'
 super + shift + control + d
 	teensy-loader-cli -mmcu=atmega32u4 -w -v $(ls -1t ~/tmp/ergodox_ez_* | head -1 ) && notify-send 'Firmware updated' || notify-send 'Firmware update failed'
 super + alt + space
