@@ -31,16 +31,14 @@ case $HOSTNAME in
     conky &
     redshift -l 45:-93 &
 
-    bspc monitor -d I II III IV V VI VII VIII IX X
-
-    xrandr --output HDMI-1 --mode 2560x1080 --above DP-1
-    bspc monitor -d I II III IV V VI VII VIII IX X
+    bspc monitor HDMI-2 -d I
+    bspc monitor DP-1 -d II III IV V
+    bspc monitor DP-2 -d VI VII VIII IX
+    bspc monitor HDMI-1 -d X
     
     bspc config top_padding 1px
     bspc config border_width 5
     bspc config window_gap 100
-    bspc rule -a steam desktop='^2' follow=no
-    bspc rule -a 'VMPK-Virtual MIDI Piano Keyboard'  desktop=^10 follow=no state=floating && vmpk &
   ;;
   "zr")
     highlight=66e0ff
