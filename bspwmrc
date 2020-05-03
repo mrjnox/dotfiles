@@ -31,6 +31,7 @@ case $HOSTNAME in
     conky &
     redshift -l 45:-93 &
     vmtouch -lq /a/sim/yt/twitch &
+    vmtouch -lq /a/notes/burners.csv &
 
     bspc monitor HDMI-2 -d I
     bspc monitor DP-1 -d II III IV V
