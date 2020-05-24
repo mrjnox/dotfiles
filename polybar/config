@@ -89,7 +89,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm 
 modules-center = xwindow
-modules-right = filesystem memory cpu temperature date time
+modules-right = filesystem-pb memory cpu temperature date time
 
 tray-position = right
 tray-padding = 2
@@ -117,7 +117,7 @@ font-0 = fixed:pixelsize=36;6
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = filesystem
+modules-left = filesystem-pb
 modules-center = mpd
 
 [bar/farleft]
@@ -147,12 +147,22 @@ modules-center = time
 type = internal/xwindow
 label = %title:0:90:...%
 
-[module/filesystem]
+[module/filesystem-pb]
 type = internal/fs
 interval = 25
 
 mount-0 = /
 mount-1 = /a
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
