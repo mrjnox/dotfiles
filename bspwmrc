@@ -28,7 +28,10 @@ case $HOSTNAME in
   ;;
   "pb")
     highlight=e95e8e
-    conky &
+    polybar -r left &
+    polybar -r right &
+    polybar -r farright &
+    polybar -r farleft &
     redshift -l 45:-93 &
     vmtouch -lq /a/sim/yt/twitch &
     vmtouch -lq /a/notes/burners.csv &
@@ -43,6 +46,8 @@ case $HOSTNAME in
     bspc config top_padding 1px
     bspc config border_width 5
     bspc config window_gap 100
+    $(sleep 3 ; bspc desktop ^1 -l monocle) &
+    #$(sleep 3 ; bspc desktop ^1 -l monocle ; bspc rule -a spotify -o desktop='^1' && spotify) &
   ;;
   "zr")
     highlight=66e0ff
