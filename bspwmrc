@@ -46,6 +46,7 @@ case $HOSTNAME in
     bspc config top_padding 1px
     bspc config border_width 5
     bspc config window_gap 100
+    xsetroot -solid "#ccb757"
     $(sleep 3 ; bspc desktop ^1 -l monocle) &
     #$(sleep 3 ; bspc desktop ^1 -l monocle ; bspc rule -a spotify -o desktop='^1' && spotify) &
   ;;
