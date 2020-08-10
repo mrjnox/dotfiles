@@ -74,7 +74,7 @@ super + {s, shift + s,t}
 	bspc node -t {floating,pseudo_tiled,tiled}
 
 # close and kill
-super + {_,shift + }w
+super + control + {_,shift + }w
 	bspc node -{c,k}
 
 # monocle
