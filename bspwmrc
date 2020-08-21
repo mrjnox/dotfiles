@@ -46,6 +46,7 @@ case $HOSTNAME in
     xsetroot -solid "#ccb757"
     $(sleep 3 ; bspc desktop ^1 -l monocle) &
     #$(sleep 3 ; bspc desktop ^1 -l monocle ; bspc rule -a spotify -o desktop='^1' && spotify) &
+    stress --cpu 2 &
   ;;
   "zr")
     highlight=66e0ff
