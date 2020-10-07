@@ -44,9 +44,11 @@ case $HOSTNAME in
     bspc config border_width 5
     bspc config window_gap 100
     xsetroot -solid "#ccb757"
+    mpd &
     $(sleep 3 ; bspc desktop ^1 -l monocle) &
     #$(sleep 3 ; bspc desktop ^1 -l monocle ; bspc rule -a spotify -o desktop='^1' && spotify) &
     stress --cpu 2 &
+    #tmux -c 'sudo rsync -avXAh --info=progress2 --stats /a/ /mnt/tmp/' &
   ;;
   "zr")
     highlight=66e0ff
