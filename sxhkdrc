@@ -88,6 +88,8 @@ super + bracket{left,right}
 # focus the last node/desktop
 Print  
         bspc desktop -f last
+super + Tab
+        bspc desktop -f last
 Alt_R
         bspc desktop -f last
 
