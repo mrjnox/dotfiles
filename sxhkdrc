@@ -34,9 +34,9 @@ super + shift + q
 	maim -s --hidecursor | xclip -selection clipboard -t image/png
 	#maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png
 super + shift + o
-        rifle ~/tmp/$(ls -1t ~/tmp | rofi -dmenu -i -p open)
+        rifle ~/tmp/"$(ls -1t ~/tmp | rofi -dmenu -i -p open)"
 super + shift + control + o
-        rifle ~/tmp/$(ls -1t ~/tmp | head -1)
+        rifle ~/tmp/"$(ls -1t ~/tmp | head -1)"
 super + shift + c
         notify-send "Clipboard:" "$(xclip -o -selection clipboard)" ; notify-send "Primary:" "$(xclip -o -selection primary)"
 
