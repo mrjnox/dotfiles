@@ -29,7 +29,6 @@ case $HOSTNAME in
     polybar -r right &
     polybar -r farright &
     polybar -r farleft &
-    redshift -l 45:-93 &
     vmtouch -lq /a/sim/yt/twitch &
     vmtouch -lq /a/notes/burners.csv &
 
@@ -54,7 +53,6 @@ case $HOSTNAME in
     highlight=66e0ff
     sleep 2; conky -a top_right -x -2530 -y 1 -d &
     pactl set-sink-volume 0 100%
-    redshift -l 45:-93 &
 
     xrandr --output DP-2 --right-of DP-1
     bspc monitor DP-1 -d I II III IV V
