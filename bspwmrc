@@ -29,14 +29,9 @@ case $HOSTNAME in
     polybar -r right &
     polybar -r farright &
     polybar -r farleft &
-<<<<<<< HEAD
-    redshift -l 45:-93 &
+    #redshift -l 45:-93 &
     #vmtouch -lq /a/sim/yt/twitch &
     #vmtouch -lq /a/notes/burners.csv &
-=======
-    vmtouch -lq /a/sim/yt/twitch &
-    vmtouch -lq /a/notes/burners.csv &
->>>>>>> 2bcf0a938c3ee8e38eb2af86d3208188f9590aea
 
     bspc monitor HDMI-2 -d I
     bspc monitor DP-1 -d II III IV V
