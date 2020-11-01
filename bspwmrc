@@ -30,8 +30,8 @@ case $HOSTNAME in
     polybar -r farright &
     polybar -r farleft &
     redshift -l 45:-93 &
-    vmtouch -lq /a/sim/yt/twitch &
-    vmtouch -lq /a/notes/burners.csv &
+    #vmtouch -lq /a/sim/yt/twitch &
+    #vmtouch -lq /a/notes/burners.csv &
 
     bspc monitor HDMI-2 -d I
     bspc monitor DP-1 -d II III IV V
@@ -56,9 +56,9 @@ case $HOSTNAME in
     pactl set-sink-volume 0 100%
     redshift -l 45:-93 &
 
-    xrandr --output DP-2 --right-of DP-1
-    bspc monitor DP-1 -d I II III IV V
-    bspc monitor DP-2 -d VI VII VIII IX X
+    #xrandr --output DP-2 --right-of DP-1
+    #bspc monitor DP-1 -d I II III IV V
+    #bspc monitor DP-2 -d VI VII VIII IX X
     bspc config top_padding 1px
     bspc config border_width 5
     bspc top_padding 10
