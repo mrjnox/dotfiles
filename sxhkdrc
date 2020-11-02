@@ -93,13 +93,6 @@ super + Tab
 Alt_R
         bspc desktop -f last
 
-# inner gaps
-super + ctrl + {1-9}
-	bspc config window_gap {5,10,15,25,40,50,60,75,90}
-# outer gaps
-super + ctrl + shift + {1-9}
-	outer {0,10,20,40,70,110,160,220,290}
-
 # presel
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
