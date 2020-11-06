@@ -25,10 +25,11 @@ case $HOSTNAME in
   ;;
   "pb")
     highlight=e95e8e
-    polybar -r left &
-    polybar -r right &
-    polybar -r farright &
+#    polybar -r left &
+#    polybar -r right &
+#    polybar -r farright &
     polybar -r farleft &
+    polybar -r top &
     #redshift -l 45:-93 &
     #vmtouch -lq /a/sim/yt/twitch &
     #vmtouch -lq /a/notes/burners.csv &
