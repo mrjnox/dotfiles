@@ -49,7 +49,7 @@ case $HOSTNAME in
     xsetroot -solid "#ccb757"
     mpd &
     $(sleep 3 ; bspc desktop ^2 -l monocle) &
-    stress --cpu 2 &
+    stress --cpu 1 &
     v4l2-ctl --set-ctrl focus_auto=0
     v4l2-ctl --set-ctrl focus_absolute=0
     v4l2-ctl --set-ctrl brightness=100
