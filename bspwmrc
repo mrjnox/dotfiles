@@ -47,6 +47,9 @@ case $HOSTNAME in
     mpd &
     $(sleep 3 ; bspc desktop ^1 -l monocle) &
     stress --cpu 2 &
+    v4l2-ctl --set-ctrl focus_auto=0
+    v4l2-ctl --set-ctrl focus_absolute=0
+    v4l2-ctl --set-ctrl brightness=100
   ;;
   "zr")
     highlight=66e0ff
