@@ -50,6 +50,10 @@ case $HOSTNAME in
     v4l2-ctl --set-ctrl focus_auto=0
     v4l2-ctl --set-ctrl focus_absolute=0
     v4l2-ctl --set-ctrl brightness=100
+    findmnt /a &> /dev/null
+      if [ $? -ne 0 ]; then
+        sudo mount /a &
+      fi
   ;;
   "zr")
     highlight=66e0ff
