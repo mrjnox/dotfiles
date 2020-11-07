@@ -31,6 +31,7 @@ case $HOSTNAME in
     polybar -r farleft &
     polybar -r top &
     polybar -r middle &
+    polybar -r bottom &
     #redshift -l 45:-93 &
     #vmtouch -lq /a/sim/yt/twitch &
     #vmtouch -lq /a/notes/burners.csv &
