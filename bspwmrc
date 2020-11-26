@@ -49,7 +49,7 @@ case $HOSTNAME in
     bspc config top_padding 1px
     bspc config border_width 5
     bspc config window_gap 100
-    xsetroot -solid "#ccb757"
+    xsetroot -solid "#808080"
     mpd &
     $(sleep 3 ; bspc desktop ^1 -l monocle ; bspc desktop ^2 -l monocle) &
     stress --cpu 1 &
