@@ -51,7 +51,7 @@ case $HOSTNAME in
     bspc config window_gap 100
     xsetroot -solid "#ccb757"
     mpd &
-    $(sleep 3 ; bspc desktop ^2 -l monocle) &
+    $(sleep 3 ; bspc desktop ^1 -l monocle ; bspc desktop ^2 -l monocle) &
     stress --cpu 1 &
     v4l2-ctl --set-ctrl focus_auto=0
     v4l2-ctl --set-ctrl focus_absolute=0
