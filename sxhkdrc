@@ -1,5 +1,7 @@
 super + Return
 	urxvt
+super + shift + Return
+	urxvt -bd red
 super + space
 	dmenu_recent -i
 super + shift + m
