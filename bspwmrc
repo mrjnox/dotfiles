@@ -49,7 +49,7 @@ case $HOSTNAME in
     bspc config top_padding 1px
     bspc config border_width 5
     bspc config window_gap 100
-    xsetroot -solid "#808080"
+    xsetroot -solid "#404040"
     mpd &
     $(sleep 3 ; bspc desktop ^1 -l monocle ; bspc desktop ^2 -l monocle) &
     stress --cpu 1 &
@@ -58,7 +58,7 @@ case $HOSTNAME in
 
     findmnt /a &> /dev/null
       if [ $? -ne 0 ]; then
-        sudo mount /a &
+        $(sudo cryptsetup open --key-file /etc/crypt.key /dev/md0 a ; sudo mount /a) &
       fi
 
   ;;
