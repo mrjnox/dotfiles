@@ -25,16 +25,10 @@ case $HOSTNAME in
   ;;
   "pb")
     highlight=e95e8e
-#    polybar -r left &
-#    polybar -r right &
-#    polybar -r farright &
     polybar -r farleft &
     polybar -r top &
     polybar -r middle &
     polybar -r bottom &
-    #redshift -l 45:-93 &
-    #vmtouch -lq /a/sim/yt/twitch &
-    #vmtouch -lq /a/notes/burners.csv &
 
     xrandr --output DP-1-3 --mode 2560x1440 --above DP-2 --rotate inverted
 
