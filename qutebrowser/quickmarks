@@ -30,7 +30,7 @@ ad https://mirrors.edge.kernel.org/archlinux/iso/
 mm https://mm.projective.io/fsys-support/channels/town-square
 hold https://holdmail.usps.com/holdmail/
 captive http://gstatic.com/generate_204
-nc https://www.namecheap.com/myaccount/login-signup/?ReturnUrl=https%3A%2F%2Fap.www.namecheap.com%2Fdomains%2Flist%2F
+nc https://www.namecheap.com/myaccount/
 dox https://configure.ergodox-ez.com/my_layouts
 yess https://www.yessyogastudio.com/yoga-classes/
 psref https://psref.lenovo.com/
@@ -55,5 +55,11 @@ apps https://wiki.archlinux.org/index.php/List_of_applications
 distro https://distrowatch.com/dwres.php?resource=bittorrent
 asana https://app.asana.com/
 color https://wtools.io/color-picker
-in21 https://www.open-e.com/portal/login/
+oe https://www.open-e.com/portal/login/
 t https://www.twitch.tv/directory/following
+mpr https://www.mprnews.org/
+fresh https://scalelogic.freshdesk.com/support/login
+camp https://reservemn.usedirect.com/MinnesotaWeb/
+transmission http://fe:30000/transmission/web/
+scalelogic https://scalelogicinc.com/
+dish https://www.twitch.tv/justdish
