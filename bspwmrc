@@ -2,7 +2,7 @@
 case $HOSTNAME in
   "si")
     highlight=1abb9b
-    xss-lock -- i3lock -fe -c 222222 &
+    xss-lock -- lock-nodunst.sh &
     polybar -r laptop &
 
     bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
