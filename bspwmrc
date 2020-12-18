@@ -93,6 +93,7 @@ xrdb -merge .Xresources 2> /dev/null &
 bspc rule -a discord follow=no
 bspc rule -a mplayer state=floating
 bspc rule -a mpv state=floating
+bspc rule -a ffplay state=floating
 bspc rule -a zoom state=floating
 bspc rule -a TeamViewer state=floating
 bspc rule -a Anydesk state=floating
