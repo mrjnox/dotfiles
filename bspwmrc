@@ -99,6 +99,8 @@ bspc rule -a TeamViewer state=floating
 bspc rule -a Anydesk state=floating
 bspc rule -a surf state=tiled manage=on
 bspc rule -a zathura state=tiled manage=on
+bspc rule -a battle.net.exe state=floating
+bspc rule -a lutris state=floating
 
 bspc config honor_size_hints true
 bspc config focused_border_color  "#$highlight"
