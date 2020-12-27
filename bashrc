@@ -10,6 +10,9 @@ HISTFILESIZE=99999999
 HISTTIMEFORMAT='%F %T '
 EDITOR=vim
 
+#silence urxvt exit segfaults
+PERL_DESTRUCT_LEVEL=2
+
 export HOSTFILE=$HOME/.config/hosts
 
 function docx { unoconv --stdout "$1" | zathura - & }
