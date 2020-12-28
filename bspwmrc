@@ -74,7 +74,7 @@ case $HOSTNAME in
 esac
 
 export GTK_THEME=Arc-Dark
-export QT_QPA_PLATFORMTHEME=gtk2
+#export QT_QPA_PLATFORMTHEME=gtk2
 export RTV_EDITOR=vim
 export XDG_CONFIG_HOME=/home/mrj/.config/
 # make sure gnome-keyring unlocks on login
