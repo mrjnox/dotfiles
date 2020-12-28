@@ -46,6 +46,7 @@ case $HOSTNAME in
     bspc config window_gap 100
     xsetroot -solid "#404040"
     mpd &
+    mpd-mpris &
     $(sleep 3 ; bspc desktop ^1 -l monocle ; bspc desktop ^2 -l monocle) &
     stress --cpu 1 &
     v4l2-ctl --set-ctrl focus_auto=0

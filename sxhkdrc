@@ -52,6 +52,8 @@ super + control + shift + p
 XF86Tools
 	xbacklight -set 50 ; outer 0 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth ; xset +dpms ; xset s noblank ; xset s off
 
+Pause
+	playerctl play-pause
 XF86AudioPlay
 	playerctl play-pause
 XF86AudioPrev
@@ -102,8 +104,8 @@ super + ctrl + space
 	bspc node -p cancel
 
 # expand
-super + ctrl + Tab
-	sleep .1 ; xdotool key shift+Escape Escape P P
+ctrl + alt + Tab
+	sleep .1 ; xdotool key Escape Shift+Escape P P
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 # contract
