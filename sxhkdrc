@@ -13,7 +13,7 @@ super + shift + e
 super + shift + control + y
 	cd /a/sim/yt ; dmenfm
 super + shift + y
-	`user=$(cat /a/sim/yt/twitch | dmenu -i -p twitch) ; mpv http://twitch.tv/$user`
+	`user=$(cat /a/notes/twitch | dmenu -i -p twitch) ; mpv http://twitch.tv/$user`
 super + shift + control + d
 	teensy-loader-cli -mmcu=atmega32u4 -w -v $(ls -1t ~/tmp/ergodox_ez_* | head -1 ) && notify-send 'Firmware updated' || notify-send 'Firmware update failed'
 super + alt + space
@@ -53,7 +53,7 @@ XF86Tools
 	xbacklight -set 50 ; outer 0 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth ; xset +dpms ; xset s noblank ; xset s off
 
 Pause
-	playerctl play-pause
+	mpc toggle
 XF86AudioPlay
 	playerctl play-pause
 XF86AudioPrev
