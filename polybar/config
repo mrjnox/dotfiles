@@ -1,9 +1,9 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #2220
+background = #111
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = #ddd
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
@@ -329,7 +329,7 @@ icon-play = 
 icon-pause = 
 icon-next = 
 
-label-song-maxlen = 100
+label-song-maxlen = 150
 label-song-ellipsis = true
 
 [module/cpu]
