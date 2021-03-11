@@ -30,13 +30,13 @@ case $HOSTNAME in
     polybar -r middle &
     polybar -r bottom &
 
-#    xrandr --output DP-1-4 --mode 2560x1440 --above DP-1 --rotate inverted
-#
-#    bspc monitor DP-1-4 -d I
-#    bspc monitor HDMI-1 -d II
-#    bspc monitor DP-2 -d III IV V
-#    bspc monitor DP-1 -d VI VII VIII IX
-#    bspc monitor DP-3 -d X
+xrandr --output DP-1 --primary --mode 3840x2160 --pos 4920x1440 --rotate normal --output DP-2 --mode 3840x2160 --pos 1080x1440 --rotate normal --output DP-3 --mode 3840x2160 --pos 8760x1440 --rotate normal --output HDMI-1 --mode 2560x1080 --pos 0x1440 --rotate right --output DP-1-4 --mode 2560x1440 --pos 5634x0 --rotate inverted --output HDMI-1-2 --off --output DVI-D-1-1 --off
+
+    bspc monitor DP-1-4 -d I
+    bspc monitor HDMI-1 -d II
+    bspc monitor DP-2 -d III IV V
+    bspc monitor DP-1 -d VI VII VIII IX
+    bspc monitor DP-3 -d X
 #
 #    xrandr --output HDMI-1 --mode 2560x1080 --left-of DP-2 --rotate right
 #    xrandr --output DP-3 --mode 3840x2160 --right-of DP-1
