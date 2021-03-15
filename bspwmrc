@@ -43,7 +43,7 @@ xrandr --output DP-1 --primary --mode 3840x2160 --pos 4920x1440 --rotate normal 
 #    
     bspc config top_padding 1px
     bspc config border_width 5
-    bspc config window_gap 100
+    bspc config window_gap 40
     xsetroot -solid "#404040"
     #$(sleep 3 ; bspc desktop ^1 -l monocle ; bspc desktop ^2 -l monocle) &
     v4l2-ctl --set-ctrl focus_auto=0
