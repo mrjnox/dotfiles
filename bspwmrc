@@ -51,19 +51,6 @@ xrandr --output DisplayPort-0 --primary --mode 3840x2160 --pos 4920x1440 --rotat
       fi
 
   ;;
-  "zr")
-    highlight=66e0ff
-    sleep 2; conky -a top_right -x -2530 -y 1 -d &
-    pactl set-sink-volume 0 100%
-
-    #xrandr --output DP-2 --right-of DP-1
-    #bspc monitor DP-1 -d I II III IV V
-    #bspc monitor DP-2 -d VI VII VIII IX X
-    bspc config top_padding 1px
-    bspc config border_width 5
-    bspc top_padding 10
-    bspc config window_gap 20
-  ;;
 esac
 
 export GTK_THEME=Arc-Dark
