@@ -41,13 +41,13 @@ xrandr --output DisplayPort-0 --primary --mode 3840x2160 --pos 4920x1440 --rotat
     bspc config border_width 5
     bspc config window_gap 40
     xsetroot -solid "#404040"
-    #$(sleep 3 ; bspc desktop ^1 -l monocle ; bspc desktop ^2 -l monocle) &
+    $(sleep 3 ; bspc desktop ^1 -l monocle ; bspc desktop ^2 -l monocle) &
     v4l2-ctl --set-ctrl focus_auto=0
     v4l2-ctl --set-ctrl focus_absolute=0
 
     findmnt /a &> /dev/null
       if [ $? -ne 0 ]; then
-        $(sudo cryptsetup open --key-file /etc/crypt.key /dev/md0 a ; sudo mount /a) &
+        $(sudo cryptsetup open --key-file /etc/crypt.key /dev/md126 a ; sudo mount /a) &
       fi
 
   ;;
@@ -71,17 +71,12 @@ unclutter --timeout 1 --ignore-scrolling --fork
 xrdb -merge .Xresources 2> /dev/null &
 
 # find "WM_CLASS" with "xprop"
-bspc rule -a discord follow=no
 bspc rule -a mplayer state=floating
 bspc rule -a mpv state=floating
 bspc rule -a ffplay state=floating
-bspc rule -a zoom state=floating
-bspc rule -a TeamViewer state=floating
 bspc rule -a Anydesk state=floating
 bspc rule -a surf state=tiled manage=on
 bspc rule -a zathura state=tiled manage=on
-bspc rule -a battle.net.exe state=floating
-bspc rule -a lutris state=floating
 
 bspc config honor_size_hints true
 bspc config focused_border_color  "#$highlight"
