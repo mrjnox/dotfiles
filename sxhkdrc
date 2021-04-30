@@ -29,10 +29,10 @@ super + Print
 XF86Display
 	monitors.sh
 
-super + q
+super + shift + control + 3
 	maim --hidecursor | xclip -selection clipboard -t image/png
 	#maim --format png | xclip -selection clipboard -t image/png
-super + shift + q
+super + shift + control + 4
 	maim -s --hidecursor | xclip -selection clipboard -t image/png
 	#maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png
 super + shift + o
