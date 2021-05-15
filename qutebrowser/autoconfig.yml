@@ -6,161 +6,47 @@
 
 config_version: 2
 settings:
-  backend:
-    global: webengine
   bindings.commands:
     global:
       normal:
         ;M: spawn mpv {url}
         ;P: spawn --userscript qute-pass --dmenu-invocation rofi --password-only
         ;m: hint links spawn mpv {hint-url}
-        ;p: spawn --userscript qute-pass --dmenu-invocation rofi
-        <ctrl+;>: spawn --userscript qute-pass --dmenu-invocation rofi
+        ;p: spawn --userscript qute-pass --dmenu-invocation dmenu
         yD: yank inline {url:host} -s
         yd: yank inline {url:host}
-  colors.completion.category.bg:
-    global: 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
-  colors.completion.item.selected.fg:
-    global: black
-  colors.statusbar.normal.bg:
-    global: '#222222'
-  colors.tabs.indicator.error:
-    global: '#f2777a'
-  colors.tabs.indicator.start:
-    global: '#0000aa'
-  colors.tabs.indicator.stop:
-    global: '#1abb9b'
-  colors.tabs.pinned.even.bg:
-    global: '#15967c'
-  colors.tabs.pinned.odd.bg:
-    global: '#1abb9b'
-  colors.tabs.selected.even.bg:
-    global: '#222222'
-  colors.tabs.selected.odd.bg:
-    global: '#222222'
-  content.desktop_capture:
-    https://whereby.com: true
   content.geolocation:
-    https://flightaware.com: false
-    https://oac.fmsiportal.com: false
-    https://sli.lightning.force.com: false
-    https://support.broadcom.com: false
-    https://www.acehardware.com: false
-    https://www.aetna.com: false
-    https://www.anytimefitness.com: false
-    https://www.apc.com: false
-    https://www.athome.com: false
-    https://www.bestbuy.com: false
-    https://www.cabelas.com: false
-    https://www.cocojune.co: false
-    https://www.corsair.com: false
-    https://www.fandango.com: false
-    https://www.fedex.com: false
-    https://www.grubhub.com: false
-    https://www.guitarcenter.com: false
-    https://www.homedepot.com: false
-    https://www.ju.st: false
-    https://www.menards.com: false
-    https://www.metrotransit.org: false
-    https://www.nashbar.com: false
-    https://www.panduit.com: false
-    https://www.petco.com: false
-    https://www.rei.com: false
-    https://www.shamrockgroup.net: false
-    https://www.trulia.com: false
+    https://www.goodwill.org: false
   content.media.audio_capture:
-    https://app.gotowebinar.com: true
-    https://hangouts.google.com: true
-    https://meet.google.com: true
-    https://verizonone.webex.com: true
-    https://whereby.com: true
-    https://www.messenger.com: true
-  content.media.audio_video_capture:
-    https://app.gotowebinar.com: true
-    https://hangouts.google.com: true
-    https://meet.google.com: true
-    https://verizonone.webex.com: true
-    https://whereby.com: true
-    https://www.messenger.com: true
-  content.media.video_capture:
-    https://app.gotowebinar.com: true
-    https://hangouts.google.com: true
-    https://meet.google.com: true
-    https://verizonone.webex.com: true
-    https://whereby.com: true
-    https://www.messenger.com: true
-  content.mute:
-    https://www.bitesquad.com: true
-    https://www.facebook.com: true
-    https://www.youarelistening.to: false
-  content.notifications:
-    https://app.gotowebinar.com: false
-    https://calendar.google.com: true
-    https://gopro.com: false
-    https://highexistence.com: false
-    https://hqq.tv: false
-    https://hypebeast.com: false
+    https://discord.com: false
+    https://www.bandlab.com: true
+  content.notifications.enabled:
+    https://anonfiles.com: false
+    https://chartcons.com: false
+    https://expandusceramics.com: false
+    https://ibb.co: false
+    https://interaksyon.philstar.com: false
     https://mail.google.com: true
-    https://mastodon.social: false
-    https://meet.google.com: false
-    https://metro.co.uk: false
-    https://mm.projective.io: false
-    https://nypost.com: false
-    https://perezhilton.com: false
-    https://scalelogic.freshdesk.com: true
-    https://scalelogic.kayako.com: true
-    https://sli.lightning.force.com: true
-    https://telegramchannels.me: false
-    https://thefappening.nu: false
-    https://voice.google.com: true
+    https://mm.projective.io: true
+    https://postimg.cc: false
+    https://store.dji.com: false
+    https://voice.google.com: false
     https://web.telegram.org: false
-    https://www.accuweather.com: false
+    https://www.aliexpress.com: false
     https://www.allrecipes.com: false
-    https://www.bandsintown.com: false
-    https://www.decathlon.co.uk: false
+    https://www.anandtech.com: false
+    https://www.bhphotovideo.com: false
+    https://www.cnet.com: false
     https://www.facebook.com: false
-    https://www.ladbible.com: false
-    https://www.macworld.com: false
-    https://www.microsoft.com: false
-    https://www.netflix.com: false
+    https://www.gearbest.com: false
+    https://www.opb.org: false
     https://www.reddit.com: false
-    https://www.rt.com: false
     https://www.seattletimes.com: false
-    https://www.thecubicle.com: false
-    https://www.thenewstribune.com: false
-    https://www.xvideos.com: false
+    https://www.shorturl.at: false
     https://www.youtube.com: false
-    https://xhamster32.com: false
-  content.pdfjs:
-    global: false
-  content.persistent_storage:
-    global: ask
   content.register_protocol_handler:
-    global: true
-  downloads.location.directory:
-    global: $HOME/tmp/
-  editor.command:
-    global:
-    - urxvt
-    - -name
-    - floating
-    - -e
-    - vim
-    - '{}'
-  fonts.keyhint:
-    global: 16pt default_family
-  fonts.messages.error:
-    global: 10pt default_family
-  input.mouse.rocker_gestures:
-    global: false
-  input.partial_timeout:
-    global: 0
-  keyhint.delay:
-    global: 500
-  keyhint.radius:
-    global: 0
-  prompt.radius:
-    global: 0
+    https://calendar.google.com?cid=%25s: false
+    https://mail.google.com?extsrc=mailto&url=%25s: false
   spellcheck.languages:
     global:
     - en-US
@@ -168,10 +54,6 @@ settings:
     global: true
   tabs.mousewheel_switching:
     global: false
-  tabs.show:
-    global: always
-  tabs.title.format:
-    global: '{index}: {current_title}'
   url.default_page:
     global: about:blank
   url.open_base_url:
