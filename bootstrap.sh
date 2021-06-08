@@ -8,3 +8,8 @@ pacman -S ${packages}
 
 echo "Cloning yay"
 git clone https://aur.archlinux.org/yay.git
+
+# use spaces instead of tabs systemwide
+set tabstop=2
+set shiftwidth=2
+set expandtab
