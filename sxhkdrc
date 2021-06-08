@@ -47,7 +47,8 @@ super + p
 super + shift + p
 	ls -1 ~/.password-store/**/*.gpg | sed -e 's/^\/home\/mrj\/.password-store\///g' -e 's/.gpg$//g' | dmenu -i -p account | xclip -r -selection primary
 super + control + shift + p
-	ls -1 ~/.password-store/**/*.gpg | dmenu -i -p file | xclip -r -selection primary
+	ls -1 ~/.password-store/**/*.gpg | sed -e 's/^\/home\/mrj\/.password-store\///g' -e 's/.gpg$//g' | dmenu -i -p otp | xargs pass otp |xclip -r -selection primary
+	ls -1 ~/.password-store/**/*.gpg | dmenu -i -p file | xclip -r -selection clipboard
 
 XF86Tools
 	xbacklight -set 50 ; outer 0 ; bspc config window_gap 60 ; sudo rfkill unblock wlan ; sudo rfkill unblock bluetooth ; xset +dpms ; xset s noblank ; xset s off
